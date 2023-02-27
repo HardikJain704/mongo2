@@ -25,10 +25,9 @@ In this project we are connecting to mongodb in  rust using their async API supp
 2. ``` 
    cargo run 
    ```
-3. Here database name we have given is `firstDatabase` which user can accordingly. 
+3. In this database name we have given is `firstDatabase` which user can accordingly. 
 
 4. open the mongodb and open same database and can now check on collections.
-
 
 
 
