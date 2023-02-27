@@ -20,13 +20,13 @@ fn add_user(client: mongodb::sync::Client){
 
 } 
 
-fn find_user(coll: mongodb::sync::Collection<User>){
-    let find = coll.find(doc! {"name": "kartik"} , None).unwrap();
-    for res in find {
-        println!("{:?}" , res);
+// fn find_user(coll: mongodb::sync::Collection<User>){
+//     let find = coll.find(doc! {"name": "kartik"} , None).unwrap();
+//     for res in find {
+//         println!("{:?}" , res);
 
-    }
-}
+//     }
+// }
 
  fn delete_user(coll: mongodb::sync::Collection<User>){
     let del = coll.delete_one(doc!{"name" : "kartik"}, None).unwrap();
@@ -40,10 +40,10 @@ fn find_user(coll: mongodb::sync::Collection<User>){
 fn main() {
     println!("Hello, world!");
     let client = Client::with_uri_str("mongodb+srv://hardikjain:2130@cluster0.nfcjepp.mongodb.net/test?w=majority").unwrap();
-    //   add_user(client);
-      let db = client.database("firstDatabase");
+    //    add_user(client);
+       let db = client.database("firstDatabase");
       let coll = db.collection::<User>("users");
-    //   find_user(coll);
+    // //    find_user(coll);
 
       delete_user(coll);
      
